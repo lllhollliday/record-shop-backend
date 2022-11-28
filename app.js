@@ -61,7 +61,7 @@ app.use(cookieParser())
 app.use(express.static("upload"))
 
 // serve state files in views/ build folder
-app.use(express.state("views/build"))
+app.use(express.static("views/build"))
 
 app.use("/", (req, res) => {
   res.sendFile("./views/build/index.html", {root:"."})
